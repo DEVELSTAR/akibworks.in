@@ -9,16 +9,33 @@
     <meta name="author" content="Akibworks">
     <link rel="canonical" href="https://akibworks.in/">
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="images/aw-monogram.gif" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:site" content="@akibworks">
+    <meta name="twitter:creator" content="@akibworks">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="AkibWorks">
+    <meta name="format-detection" content="telephone=no">
+
     <!-- Favicons & App Icons -->
-    <link rel="icon" href="/images/aw-monogram.png" type="image/png">
-    <link rel="apple-touch-icon" href="/images/aw-monogram.png" sizes="180x180">
+    <link rel="icon" href="/images/aw-monogram.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="/images/aw-monogram.webp" sizes="180x180">
     <meta name="theme-color" content="#0f172a">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="AkibWorks — Websites & Apps for Local Businesses">
     <meta property="og:description" content="AkibWorks builds affordable, professional websites and small web apps for local businesses. Contact us to start your project.">
-    <meta property="og:image" content="https://akibworks.in/images/aw-monogram.png">
+    <meta property="og:image" content="https://akibworks.in/images/aw-monogram.webp">
     <meta property="og:url" content="https://akibworks.in/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -31,13 +48,13 @@
                 "@type": "Organization",
                 "name": "AkibWorks",
                 "url": "https://akibworks.in/",
-                "logo": "https://akibworks.in/images/aw-monogram.png",
+                "logo": "https://akibworks.in/images/aw-monogram.webp",
                 "sameAs": []
             },
             {
                 "@type": "LocalBusiness",
                 "name": "AkibWorks",
-                "image": "https://akibworks.in/images/aw-monogram.png",
+                "image": "https://akibworks.in/images/aw-monogram.webp",
                 "telephone": "+919012626767",
                 "email": "contact@akibworks.in",
                 "address": {
@@ -68,18 +85,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Phosphor Icons for modern vector icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
 
     
 </head>
 <body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container top-bar-container">
-            <div class="top-bar-item">
+            <!-- <div class="top-bar-item">
                 <i class="ph-fill ph-map-pin"></i> 18th cross road, Rajiv Gandhi Nagar, Bangalore
-            </div>
+            </div> -->
             <div class="top-bar-contact">
                 <a href="tel:+919012626767" class="top-bar-item"><i class="ph-fill ph-phone"></i> +91 90126 26767</a>
                 <a href="mailto:contact@akibworks.in" class="top-bar-item"><i class="ph-fill ph-envelope-simple"></i> contact@akibworks.in</a>
@@ -100,8 +120,8 @@
                 <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
             </div>
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <i class="ph ph-list"></i>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                <i class="ph ph-list" aria-hidden="true"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
@@ -113,8 +133,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
+    <!-- Hero Section - Main Content -->
+    <header class="hero" id="main-content">
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="badge badge-local">FOR LOCAL BUSINESSES IN INDIA</div>
@@ -134,9 +154,9 @@
                 </div>
                 <div class="hero-trust">
                     <div class="avatars">
-                        <img src="images/client-1.jpg" alt="Happy client" class="avatar">
-                        <img src="images/client-2.jpg" alt="Satisfied customer" class="avatar">
-                        <img src="images/client-3.jpg" alt="Business owner" class="avatar">
+                        <img src="images/client-1.webp" alt="Happy client" class="avatar">
+                        <img src="images/client-2.webp" alt="Satisfied customer" class="avatar">
+                        <img src="images/client-3.webp" alt="Business owner" class="avatar">
                     </div>
                     <span>Trusted by 50+ local businesses</span>
                 </div>
@@ -145,7 +165,7 @@
             <div class="hero-image">
                 <div class="image-wrapper">
                     <div class="mockup-frame hero-mockup">
-                        <img src="images/salon-web-temp.png" alt="Google Search Results for Local Business">
+                        <img src="images/salon-web-temp.webp" alt="Google Search Results for Local Business" loading="lazy">
                     </div>
                     <div class="glow-effect"></div>
                 </div>
@@ -192,7 +212,7 @@
             <div class="solution-flex">
                 <div class="solution-image">
                     <div class="image-wrapper">
-                        <img src="images/laptop-illustration.jpg" alt="Google Business Optimization by AkibWorks" class="rounded-image shadow-lg">
+                        <img src="images/laptop-illustration.webp" alt="Google Business Optimization by AkibWorks" class="rounded-image shadow-lg" loading="lazy">
                     </div>
                 </div>
                 <div class="solution-content">
@@ -584,7 +604,10 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             const icon = menuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('active')) {
+            const isExpanded = mobileMenu.classList.contains('active');
+            menuBtn.setAttribute('aria-expanded', isExpanded);
+            
+            if (isExpanded) {
                 icon.classList.replace('ph-list', 'ph-x');
             } else {
                 icon.classList.replace('ph-x', 'ph-list');
@@ -711,6 +734,60 @@
         
         // Start the animation
         typeAnimation();
+
+        // Button Loading States
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.getAttribute('href')?.includes('wa.me')) {
+                    this.classList.add('btn-loading');
+                    this.dataset.originalText = this.innerHTML;
+                    this.innerHTML = '<span class="spinner"></span> Opening WhatsApp...';
+                    
+                    setTimeout(() => {
+                        this.classList.remove('btn-loading');
+                        this.innerHTML = this.dataset.originalText;
+                    }, 2000);
+                }
+            });
+        });
+
+        // Accessibility: Announce dynamic content changes
+        const announcer = document.createElement('div');
+        announcer.setAttribute('aria-live', 'polite');
+        announcer.setAttribute('aria-atomic', 'true');
+        announcer.className = 'sr-only';
+        announcer.style.cssText = 'position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;';
+        document.body.appendChild(announcer);
+
+        // Announce typing animation changes
+        let lastPhrase = '';
+        const originalTypeAnimation = typeAnimation;
+        
+        // Privacy-Friendly Analytics (Plausible)
+        if (typeof plausible === 'undefined') {
+            window.plausible = function(eventName, props) {
+                if (window.console && console.log) {
+                    console.log('[Analytics]', eventName, props || '');
+                }
+            };
+        }
+
+        // Track important interactions
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', () => {
+                plausible('Contact', { props: { method: 'WhatsApp' } });
+            });
+        });
+
+        document.querySelectorAll('.pricing-card .btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const plan = btn.closest('.pricing-card').querySelector('h3').textContent;
+                plausible('Pricing Click', { props: { plan: plan } });
+            });
+        });
     </script>
+    
+    <!-- Privacy-Friendly Analytics (Plausible) -->
+    <script defer data-domain="akibworks.in" src="https://plausible.io/js/script.outbound-links.js"></script>
 </body>
 </html>
